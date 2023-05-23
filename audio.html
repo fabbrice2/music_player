@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="imgs/music-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="audio.css">
+    <title>Player audio</title>
+</head>
+<body>
+    <div class="player">
+        <header>
+            <span class="material-symbols-outlined">expand_more</span>
+            <h1>Now Playing</h1>
+            <span class="material-symbols-outlined">more_horiz</span>
+        </header>
+        <div class="slider">
+            <div class="poster ">
+                <img src="imgs/-494796846.jpg" alt="poster">
+                <h1>Quand j'y repense</h1>
+                <h2>Mig feat Tiakola </h2>
+            </div>
+    
+            <div class="poster">
+                <img src="imgs/full black.webp" alt="poster">
+                <h1>Full Black</h1>
+                <h2>Guy2bezbar</h2>
+            </div>
+    
+            <div class="poster">
+                <img src="imgs/gamb fran.jpg" alt="poster">
+                <h1>Eyes_contact</h1>
+                <h2>Gambino_La_MG feat Franglish</h2>
+            </div>
+    
+            <div class="poster">
+                <img src="imgs/guy2bezbar-la-calle-part-2.jpg" alt="poster">
+                <h1>La Callé part.2 (Remontada)</h1>
+                <h2>Guy2bezbar</h2>
+            </div>
+    
+            <div class="poster">
+                <img src="imgs/LETO.jpg" alt="poster">
+                <h1>Mozart Capitaine Jackson</h1>
+                <h2>LETO</h2>
+            </div>
+        </div>
+        <div class="audio">
+            <audio id="audioPlayer" ontimeupdate="update(this)">
+                <source src="audio/Mig - Quand j'y repense feat Tiakola (Clip Officiel)-[onlinevideoconverter.com].mp3"></source>
+                <source src="audio/Guy2bezbar – Full Black (Clip officiel)-[onlinevideoconverter.com].mp3"></source>
+                <source src="audio/Gambino_La_MG_-_Eyes_contact_Clip_officiel_ft.mp3"></source>
+                <source src="audio/Guy2Bezbar - La Callé part.2 (Remontada)-[onlinevideoconverter.com].mp3"></source>
+                <source src="audio/LETO - Mozart Capitaine Jackson (Episode 2)-[onlinevideoconverter.com].mp3"></source>
+              </audio>
+        </div>
+        <div class="bar">
+                <div class="progress_bar"></div>
+        </div>
+        <div class="minute">
+            <span class="debut">0:00</span>
+            <span class="finish">0:00</span>
+        </div>
+        <div class="controls">
+            <div class="left_control">
+                <ion-icon class="icon" name="shuffle-outline"></ion-icon>
+                <span class="material-symbols-outlined" onclick="plusSlides(-1)">skip_previous</span>
+            </div>
+            <div class="play_pause">  
+                <span class="material-symbols-outlined">play_arrow</span>
+                <span class="material-symbols-outlined">pause</span>
+            </div>
+            <div class="right_control">
+                <span class="material-symbols-outlined" onclick="plusSlides(1)">skip_next</span>
+                <span class="material-symbols-outlined" >queue_music</span>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="./audio.js"></script>
+</body>
+</html>
